@@ -1,1 +1,1 @@
-# minecraft-clone
+# Django CRUD & Mysql
