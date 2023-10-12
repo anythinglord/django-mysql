@@ -41,3 +41,13 @@ If you want to contribute to this project, follow these steps:
 3. Make your changes and commit them (`git commit -m 'Add new feature'`)
 4. Push the branch (`git push origin feature/new-feature`)
 5. Open a pull request on GitHub
+
+## Util commands
+- Create a migration file after to create a new model
+```python
+python manage.py makemigrations
+```
+- Create a superuser
+```python
+python manage.py createsuperuser
+```
