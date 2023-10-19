@@ -46,9 +46,18 @@ def create_task(request):
             'form': TaskForm
         })
     else:
-        return render(request, 'create_task.html', {
-            'form': TaskForm
-        })
+        try:
+            form = TaskForm(request.POST)
+            new_task = form.save(commit=False)
+            new_task.user = request.user
+            new_task.save()
+            return redirect('tasks')
+        except ValueError:
+            return render(request, 'create_task.html', {
+                'form': TaskForm,
+                'error': 'There is a invalida value'
+            })
+        
 
 def signout(request):
     logout(request)
