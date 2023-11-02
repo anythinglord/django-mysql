@@ -10,6 +10,7 @@
         </a>
         <p>{{ task.description }}</p>
         <p>{{ task.created }}</p>
+        <p>{{ task.datecompleted|date:'M j Y:i' }}</p>
     </li>
     {% endfor %}
 </ul>

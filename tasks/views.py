@@ -38,9 +38,15 @@ def signup(request):
             'error': 'Passwords don`t match'
         })
 
-
 def tasks(request):
-    tasks = Task.objects.filter(user=request.user, datecompleted__isnull=True)
+    tasks = Task.objects.filter(user=request.user, datecompleted__isnull=True).order_by
+    ('-datecompleted')
+    return render(request, 'tasks.html', {
+        'tasks': tasks
+    })
+
+def tasks_completed(request):
+    tasks = Task.objects.filter(user=request.user, datecompleted__isnull=False)
     return render(request, 'tasks.html', {
         'tasks': tasks
     })
