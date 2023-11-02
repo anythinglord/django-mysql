@@ -3,6 +3,10 @@
     <h1>Tasks detail</h1>
 
     <h2>{{ task.title }}</h2>
-    <p>{{ task.description }}</p>
-    <p>{{ task.user.username }}</p>
+    {{ error }}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>Save</button>
+    </form>
 {% endblock %}

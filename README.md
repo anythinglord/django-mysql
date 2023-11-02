@@ -1,4 +1,4 @@
-# Django CRUD & Mysql
+# Task Management application
 ## Requirements
 
 - Python 3.x
