@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Home</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni perferendis voluptas labore modi vitae veritatis ducimus, quam mollitia saepe aperiam, nisi assumenda sit nostrum excepturi nesciunt illo, ipsa ut nulla.</p>
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Tasks Manager</h1>
+        <p class="lead text-center">Stay organized, stay productive!</p>
+        <p>The Task Manager Application. 
+            In today's fast-paced world, staying organized is crucial, and this application 
+            s designed to help you do just that. Let's dive in and explore how this powerful tool 
+            can enhance your productivity and keep you on top of your tasks..</p>
+        <p>
+            Before we jump into the features, let's discuss why staying organized is essential. 
+            In both personal and professional life, managing tasks efficiently can significantly 
+            impact our success. The Task Manager Application is your solution to streamline 
+            your tasks, prioritize effectively, and achieve your goals.
+        </p>
+        <div class="text-center mt-5">
+            <a class="btn btn-secondary" href="/signin/">Sign In</a>
+            <a class="btn btn-dark" href="/signup/">Sign Up</a>
+        </div>
+    </section>
+</main>
 {% endblock %}
